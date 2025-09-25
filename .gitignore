@@ -1,0 +1,13 @@
+# Entorno virtual
+venv/
+venv_pedidos/
+
+# Bases de datos
+db.sqlite3
+huey.db
+
+# Archivos de caché de Python
+__pycache__/
+*.pyc
+
+.env

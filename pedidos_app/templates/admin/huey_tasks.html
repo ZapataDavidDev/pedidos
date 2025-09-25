@@ -1,0 +1,52 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block content %}
+<div id="content-main">
+  <h1>{{ title }}</h1>
+  <div class="module" id="changelist">
+    <table>
+      <thead>
+        <tr>
+          <th>ID Tarea</th>
+          <th>Nombre</th>
+          <th>Estado</th>
+          <th>Reintentos</th>
+          <th>Fecha/Hora</th>
+          <th>Resultado / Error</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for task in tasks %}
+        <tr class="{% cycle 'row1' 'row2' %}">
+          <td>{{ task.id }}</td>
+          <td>{{ task.name }}</td>
+          <td>
+            {% if task.status == 0 %}PENDIENTE{% endif %}
+            {% if task.status == 1 %}EN EJECUCIÓN{% endif %}
+            {% if task.status == 2 %}<b>COMPLETADO</b>{% endif %}
+            {% if task.status == 3 %}<b style="color: red;">FALLIDO</b>{% endif %}
+            {% if task.status == 4 %}PROGRAMADO{% endif %}
+          </td>
+          <td>{{ task.retries }}</td>
+          <td>{{ task.timestamp }}</td>
+          <td>
+            {% if task.error %}
+              <span style="color: red; font-family: monospace; font-size: 0.8em;">{{ task.error|truncatechars:100 }}</span>
+            {% elif task.result_data %}
+              <span style="color: green; font-family: monospace; font-size: 0.8em;">{{ task.result_data|truncatechars:100 }}</span>
+            {% else %}
+              -
+            {% endif %}
+          </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="6">No hay tareas para mostrar. Ejecuta el iniciador de pedidos para encolar nuevas tareas.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
