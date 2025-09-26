@@ -49,6 +49,7 @@ Clonar el repositorio:
 Bash
 
 git clone https://github.com/ZapataDavidDev/pedidos.git
+
 cd pedidos
 
 
@@ -58,6 +59,7 @@ Crear y activar un entorno virtual:
 python -m venv venv
 
 # Activar en Windows (PowerShell)
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 .\venv\Scripts\Activate.ps1
 
 # Activar en Linux/macOS
@@ -76,7 +78,7 @@ python manage.py migrate
 python manage.py createsuperuser   
 
 ▶️ Ejecución de la Aplicación
-Para ejecutar la aplicación, es necesario tener dos terminales de PowerShell abiertas en la carpeta del proyecto, con el entorno virtual activado en cada una.
+Para ejecutar la aplicación, es necesario tener dos terminales de PowerShell abiertas en la carpeta del proyecto, con el entorno virtual activado en cada una (en caso que el entorno vistual no active usar el comando Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process).
 
 Terminal 1: Iniciar el Worker de Huey
 Este proceso se encarga de escuchar y procesar las tareas de la cola.
