@@ -1,4 +1,3 @@
-<img width="1918" height="980" alt="image" src="https://github.com/user-attachments/assets/b53214cd-2e0b-4dd8-acea-e7a4f2c97d93" />
 #  Procesador de Pedidos Asíncrono con Django y Huey
 
 **Descripción del Proyecto**
