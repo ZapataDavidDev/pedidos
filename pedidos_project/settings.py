@@ -86,7 +86,7 @@ DATABASES = {
 
 # --- Configuración de Huey ---
 HUEY = {
-    'huey_class': 'huey.SqliteHuey',  # Le damos la CLASE, no una instancia.
+    'huey_class': 'huey.SqliteHuey',  
     'name': 'procesador-pedidos-db',
     'filename': BASE_DIR / 'huey.db',
     'immediate': False,

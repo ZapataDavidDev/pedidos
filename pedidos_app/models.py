@@ -1,10 +1,10 @@
 from django.db import models
 
 class PedidoProcesado(models.Model):
-    id_pedido_original = models.IntegerField(primary_key=True, help_text="ID original del pedido de entrada")
-    hash_pedido = models.CharField(max_length=64, unique=True, help_text="Hash SHA-256 del pedido procesado")
+    id_pedido_original = models.IntegerField(primary_key=True, help_text="ID pedido de entrada")
+    hash_pedido = models.CharField(max_length=64, unique=True, help_text="Hash procesado")
     cliente = models.CharField(max_length=255)
-    detalle_completo = models.JSONField(help_text="JSON con la lista de productos enriquecidos")
+    detalle_completo = models.JSONField(help_text="JSON enriquecido")
     subtotal = models.DecimalField(max_digits=10, decimal_places=2)
     descuento = models.DecimalField(max_digits=10, decimal_places=2)
     total_final = models.DecimalField(max_digits=10, decimal_places=2)
