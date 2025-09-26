@@ -1,4 +1,4 @@
-
+<img width="1918" height="980" alt="image" src="https://github.com/user-attachments/assets/b53214cd-2e0b-4dd8-acea-e7a4f2c97d93" />
 #  Procesador de Pedidos Asíncrono con Django y Huey
 
 **Descripción del Proyecto**
@@ -97,6 +97,9 @@ http://127.0.0.1:8000/pedidos/iniciar/
 
 Observar el Worker: Inmediatamente, la terminal donde se está ejecutando run_huey mostrará en tiempo real los logs del procesamiento de los 10 pedidos en paralelo.
 
+<img width="1918" height="282" alt="image" src="https://github.com/user-attachments/assets/f55edd58-843a-42c1-b726-ea4a7d15e0ca" />
+
+
 Revisar los Resultados en el Admin:
 
 Acceda al panel de administración: http://127.0.0.1:8000/admin/
@@ -105,7 +108,10 @@ Inicie sesión con las credenciales creadas.
 
 Ver el Historial de Tareas:
 
-Vaya a la sección "Pedidos_App" -> "Task histories".
+Vaya a la sección "Pedidos_App" -> "Task historys".
+
+<img width="1918" height="980" alt="image" src="https://github.com/user-attachments/assets/9f34cdb0-1b0a-4331-9216-45447eaa840a" />
+
 
 Verá el registro de las 10 tareas ejecutadas. Algunas aparecerán como "Completada" y otras (las que tenían datos inválidos) como "Fallida", con su respectivo mensaje de error.
 
@@ -113,7 +119,13 @@ En las tareas completadas, la columna "Pedido Asociado" contiene un enlace direc
 
 Ver los Pedidos Procesados:
 
+
+
+
 Vaya a la sección "Pedidos_App" -> "Pedido procesados".
+
+<img width="1917" height="972" alt="image" src="https://github.com/user-attachments/assets/61071486-c1fa-482f-a71b-33fb8439928c" />
+
 
 Aquí verá únicamente los registros de los pedidos que se procesaron exitosamente.
 
