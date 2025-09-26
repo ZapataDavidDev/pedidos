@@ -1,5 +1,8 @@
-**Procesador de Pedidos Asíncrono con Django y Huey**
+
+#  Procesador de Pedidos Asíncrono con Django y Huey
+
 **Descripción del Proyecto**
+
 Este proyecto es una solución para implementar un pipeline de procesamiento de pedidos. La aplicación utiliza Django como framework web y Huey como un gestor de colas de trabajo ligero y eficiente para realizar el procesamiento de forma asíncrona y concurrente con manejo de excepciones y generacion de logs.
 
 El sistema simula la recepción de pedidos, los encola y los procesa en segundo plano a través de un flujo de 4 etapas, guardando un historial detallado de cada ejecución y el resultado final en una base de datos SQLite.
@@ -34,11 +37,13 @@ El flujo de datos sigue un patrón Productor/Consumidor clásico:
 
 🚀 Requisitos Previos
 Python 3.11 o superior
+Instalación para Windows
+
 
 Git
 
 ⚙️ Instalación y Configuración
-Siga los siguientes pasos para poner en marcha el proyecto:
+Siga los siguientes pasos para poner en marcha el proyecto, ejecutar en terminal de PowerShell (recomendado):
 
 Clonar el repositorio:
 
@@ -47,7 +52,7 @@ Bash
 git clone https://github.com/ZapataDavidDev/pedidos.git
 cd pedidos
 
-#  (en Windows PowerShell)
+
 Crear y activar un entorno virtual:
 
 # Crear el entorno
